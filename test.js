@@ -44,7 +44,7 @@ for (const [node, v8, mapping] of [
 	test(buildsCorrectPreset, node, v8, mapping);
 }
 
-test('@babel/plugin-transform-modules-commonjs can be disabled', t => {
+test('@gerhobbelt/babel-plugin-transform-modules-commonjs can be disabled', t => {
 	const {plugins} = buildPreset('8.9.4', '6.1.534.50', {modules: false});
-	t.false(new Set(plugins).has(require('@babel/plugin-transform-modules-commonjs').default));
+	t.false(new Set(plugins).has(require('@gerhobbelt/babel-plugin-transform-modules-commonjs').default));
 });
